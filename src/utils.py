@@ -3,7 +3,7 @@ import cv2
 from collections import OrderedDict
 import json
 
-image_path = 'C:/Users/harsh/projects/ustript/test-image/image5.jpg'
+image_path = '/test-image/image5.jpg'
 img = cv2.imread(image_path)
 
 
