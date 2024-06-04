@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from .views import TestStrip
+
 urlpatterns = [
+    path('test/', TestStrip.as_view(), name='test-strip'),
     path('admin/', admin.site.urls),
 ]

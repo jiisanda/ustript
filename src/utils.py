@@ -1,10 +1,5 @@
 import numpy as np
 import cv2
-from collections import OrderedDict
-import json
-
-image_path = '/test-image/image5.jpg'
-img = cv2.imread(image_path)
 
 
 def analyze_colors(image):
@@ -32,14 +27,3 @@ def analyze_colors(image):
         rgb = [int(channel) for channel in mean_color]
         colors.append(rgb)
     return colors
-
-
-analyze_colors = analyze_colors(img)
-color_names = ['URO', 'BIL', 'KET', 'BLD', 'PRO', 'NIT', 'LEU', 'GLU', 'SG', 'PH']
-color_data = OrderedDict()
-for index, name in enumerate(color_names):
-    color_data[name] = analyze_colors[index]
-
-
-json_data = json.dumps(color_data, sort_keys=False)
-print(json_data)
