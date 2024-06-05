@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 {% load static %}
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
     <link rel="stylesheet" href="{% static 'css/form.css' %}">
 </head>
-<body class="form-body">
-Hello ji
-<form id="upload-form" action="" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" id="file">
-    <input type="submit" value="Upload">
-</form>
-<div class="upload-area" id="uploadfile">
-    Drag and Drop file here
-</div>
-<div id="response"></div>
-<script src="{% static 'js/form.js' %}"></script>
+<body>
+    <div class="left-container">
+        Some Content
+        <div id="response">Response Content</div>
+    </div>
+    <div class="right-container">
+        <div class="upload-form">
+            <form id="upload-form" action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+        <div class="upload-area" id="uploadfile">
+            Drag and Drop file here
+        </div>
+    </div>
 </body>
+<script src="{% static 'js/form.js' %}"></script>
 </html>
