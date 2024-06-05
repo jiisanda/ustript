@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Explorer</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>API Explorer - UTest</h1>
+            <h5>Click <span class="title-span">Try it Out</span> to directly test the application</h5>
+        </header>
+        <main>
+            <section class="api-section">
+                <h2>POST /test</h2>
+                <div class="api-method">
+                    <div class="method">POST</div>
+                    <div class="endpoint">http://127.0.0.1:8000/test</div>
+                </div>
+                <div class="parameters">
+                    <h3>Upload File</h3>
+                    <input type="file" id="file-input" />
+                </div>
+                <a href="/test"><button class="try-it-out">Try it out</button></a>
+                <div class="response">
+                    <h3>Response</h3>
+                    <pre id="response">Response Content</pre>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
