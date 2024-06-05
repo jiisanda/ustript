@@ -29,13 +29,8 @@ class TestStrip(APIView):
             for indx, label in enumerate(labels):
                 label_data[label] = colors[indx]
 
-            response_data = {
-                'success': 'File uploaded successfully...',
-                'body': label_data
-            }
-
-            json_data = json.dumps(response_data, sort_keys=False)
-            return Response(json_data, status=200)
+            # json_data = json.dumps(response_data, sort_keys=False)
+            return Response(label_data, status=200)
         else:
             return Response(
                 {
