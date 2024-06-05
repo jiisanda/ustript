@@ -10,6 +10,14 @@ from rest_framework.response import Response
 from .utils import analyze_colors
 
 
+class Home(APIView):
+    """
+    Home View
+    """
+    def get(self, request):
+        return render(request, 'home.html')
+
+
 class TestStrip(APIView):
     """
     Response to the uploaded image
@@ -18,9 +26,7 @@ class TestStrip(APIView):
         return render(request, 'test-form.html')
 
     def post(self, request):
-        print(request.FILES)
         image = request.FILES.get('file')
-        print(image)
         if image:
             img = cv2.imdecode(np.frombuffer(image.read(), np.uint8), cv2.IMREAD_COLOR)
             colors = analyze_colors(img)

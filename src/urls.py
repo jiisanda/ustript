@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from .views import TestStrip
+from .views import TestStrip, Home
 
 urlpatterns = [
+    path('', Home.as_view(), name='home'),
     path('test/', TestStrip.as_view(), name='test-strip'),
     path('admin/', admin.site.urls),
 ]
