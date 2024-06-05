@@ -9,15 +9,24 @@
 </head>
 <body>
     <div class="left-container">
-        Some Content
-        <div id="response">Response Content</div>
+        <nav>
+            <p><a class="explorer" href="/">API Explorer</a></p>
+        </nav>
+        <pre id="response">Response Content</pre>
     </div>
     <div class="right-container">
         <div class="upload-form">
             <form id="upload-form" action="" method="post" enctype="multipart/form-data">
                 <input type="file" name="file" id="file">
-                <input type="submit" value="Upload">
+                <br>
+                <br>
+                <button class="btn-test" type="submit"><div class="color-fill-2"></div><p>Button</p></button>
             </form>
+        </div>
+        <div class="divider">
+            <div class="dash" id="dash-1">----------------------</div>
+            <span id="or">OR</span>
+            <div class="dash" id="dash-2">----------------------</div>
         </div>
         <div class="upload-area" id="uploadfile">
             Drag and Drop file here
